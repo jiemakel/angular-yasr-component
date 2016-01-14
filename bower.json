@@ -1,15 +1,16 @@
 {
-  "name": "angular-sparql-service",
-  "version": "1.0.1",
+  "name": "angular-yasqe-directive",
+  "version": "1.0.0",
   "authors": [
     "Eetu Mäkelä <eetu.makela@iki.fi>"
   ],
-  "description": "Angular service for querying SPARQL endpoints",
-  "main": "dist/sparql-service.js",
+  "description": "Angular directive wrapping YASQE",
+  "main": "dist/yasqe-directive.js",
   "license": "MIT",
-  "homepage": "https://github.com/jiemakel/angular-sparql-service",
+  "homepage": "https://github.com/jiemakel/angular-yasqe-directive",
   "dependencies": {
-    "angular": "~1.4.8"
+    "angular": "~1.4.8",
+    "yasgui-yasqe": "~2.7.2"
   },
   "ignore": [
     "**/.*",
