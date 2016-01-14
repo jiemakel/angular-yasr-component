@@ -10,7 +10,7 @@
   "homepage": "https://github.com/jiemakel/angular-yasqe-directive",
   "dependencies": {
     "angular": "~1.4.8",
-    "yasgui-yasqe": "~2.7.2"
+    "yasgui-yasqe": "~2.8.2"
   },
   "ignore": [
     "**/.*",
