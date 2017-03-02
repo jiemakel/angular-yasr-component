@@ -2,15 +2,15 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('build', function() {
-  var tsProject = $.typescript.createProject('tsconfig.json');
+  var tsProject = $.typescript.createProject('tsconfig.json',{typescript:require('typescript')});
   var tsResult = tsProject.src()
     .pipe($.plumber({ errorHandler: $.notify.onError("<%= error.stack %>") }))
     .pipe($.sourcemaps.init())
-    .pipe($.typescript(tsProject));
+    .pipe(tsProject());
   return require('merge2')(
     tsResult.js
-      .pipe($.typescriptAngular({ moduleName: 'fi.seco.sparql' }))
-      .pipe($.sourcemaps.write('.')),
+      .pipe($.typescriptAngular({ moduleName: 'fi.seco.yasqe' }))
+      .pipe($.sourcemaps.write()),
     tsResult.dts).pipe(gulp.dest('dist'));
 });
 
