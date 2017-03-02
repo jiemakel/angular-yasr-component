@@ -20,14 +20,15 @@ namespace fi.seco.yasqe {
 
     constructor(private $element: angular.IAugmentedJQuery, private $timeout: angular.ITimeoutService) {}
     public $postLink(): void {
+      if (!this.content) this.content = ''
       this.yasqe = YASQE(this.$element[0], {createShareLink: false, sparql: { endpoint: this.endpoint, callbacks: { complete: this.queryResultHandler}, showQueryButton: this.queryResultHandler ? true : false}})
       this.yasqe.setValue(this.content)
       if (this.contentChanged) this.yasqe.on('change', () => this.contentChanged(this.yasqe.getValue()))
       if (this.setYasqe) this.setYasqe(this.yasqe)
     }
     public $onChanges(changes: IYasqeComponentBindingChanges): void {
-      if (changes.endpoint) this.yasqe.options.sparql.endpoint = changes.endpoint.currentValue
-      if (changes.content) this.yasqe.setValue(changes.content.currentValue)
+      if (changes.endpoint && !changes.endpoint.isFirstChange) this.yasqe.options.sparql.endpoint = changes.endpoint.currentValue
+      if (changes.content && !changes.content.isFirstChange) this.yasqe.setValue(changes.content.currentValue)
     }
   }
 
