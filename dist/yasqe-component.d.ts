@@ -7,12 +7,19 @@ declare namespace fi.seco.yasqe {
     class YasqeComponentController implements angular.IComponentController {
         private $element;
         private $timeout;
+        onQueryResults: (vars: {
+            results: any;
+        }) => void;
+        onContentChanged: (vars: {
+            content: string;
+        }) => void;
+        onInit: (vars: {
+            yasqe: any;
+        }) => void;
+        endpoint: string;
+        content: string;
+        showQueryButton: string;
         private yasqe;
-        private queryResultHandler;
-        private contentChanged;
-        private setYasqe;
-        private endpoint;
-        private content;
         constructor($element: angular.IAugmentedJQuery, $timeout: angular.ITimeoutService);
         $postLink(): void;
         $onChanges(changes: IYasqeComponentBindingChanges): void;
