@@ -29,8 +29,8 @@ namespace fi.seco.yasqe {
       this.onInit({yasqe: this.yasqe})
     }
     public $onChanges(changes: IYasqeComponentBindingChanges): void {
-      if (changes.endpoint && !changes.endpoint.isFirstChange) this.yasqe.options.sparql.endpoint = changes.endpoint.currentValue
-      if (changes.content && !changes.content.isFirstChange && changes.content.currentValue !== this.yasqe.getValue()) this.yasqe.setValue(changes.content.currentValue)
+      if (changes.endpoint && !changes.endpoint.isFirstChange()) this.yasqe.options.sparql.endpoint = changes.endpoint.currentValue
+      if (changes.content && !changes.content.isFirstChange() && changes.content.currentValue !== this.yasqe.getValue()) this.yasqe.setValue(changes.content.currentValue)
     }
   }
 
