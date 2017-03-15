@@ -1,6 +1,6 @@
 {
   "name": "angular-yasqe-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "devDependencies": {
     "@types/angular": "^1.6.7",
     "del": "2.2.2",

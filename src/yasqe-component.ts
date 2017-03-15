@@ -36,7 +36,7 @@ namespace fi.seco.yasqe {
 
   export class YasqeComponent implements angular.IComponentOptions {
     public bindings: {[id: string]: string} = {
-      content: '=',
+      content: '<',
       onContentChanged: '&',
       onQueryResults: '&',
       endpoint: '<',
