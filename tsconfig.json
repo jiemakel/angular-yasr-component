@@ -15,7 +15,7 @@
         "node_modules/@types/**/*.d.ts"
     ],
     "files": [
-        "src/yasqe-component.ts",
+        "src/yasr-component.ts",
         "node_modules/@types/angular/index.d.ts",
         "node_modules/@types/jquery/index.d.ts"
     ],
