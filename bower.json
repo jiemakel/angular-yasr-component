@@ -1,6 +1,6 @@
 {
   "name": "angular-yasr-component",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "authors": [
     "Eetu Mäkelä <eetu.makela@iki.fi>"
   ],
@@ -17,6 +17,6 @@
     "tsconfig.json",
     "tslint.json",
     "package.json",
-    "gulpfile.js"
+    "webpack.config.js"
   ]
 }

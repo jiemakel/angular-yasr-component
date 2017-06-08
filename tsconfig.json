@@ -1,25 +1,12 @@
 {
     "compilerOptions": {
-        "module": "es6",
-        "moduleResolution": "node",
         "target": "es5",
-        "rootDir": "src",
-        "outDir": ".tmp",
-        "declaration": true
+        "declaration": true,
+        "declarationDir": "."
     },
-    "include": [
-        "src/**/*.ts"
-    ],
-    "filesGlob": [
-        "src/**/*.ts",
-        "node_modules/@types/**/*.d.ts"
-    ],
     "files": [
         "src/yasr-component.ts",
         "node_modules/@types/angular/index.d.ts",
         "node_modules/@types/jquery/index.d.ts"
-    ],
-    "atom": {
-        "rewriteTsconfig": true
-    }
+    ]
 }

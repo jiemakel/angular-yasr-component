@@ -1,19 +1,17 @@
 {
   "name": "angular-yasr-component",
-  "version": "1.0.5",
+  "version": "1.0.7",
+  "main": "dist/yasr-component.js",
+  "description": "Angular component wrapping YASR",
   "devDependencies": {
     "@types/angular": "^1.6.7",
-    "del": "2.2.2",
-    "gulp": "3.9.1",
-    "gulp-load-plugins": "1.5.0",
-    "gulp-notify": "3.0.0",
-    "gulp-plumber": "1.1.0",
-    "gulp-sourcemaps": "2.4.1",
-    "gulp-typescript": "3.1.5",
-    "gulp-typescript-angular": "git://github.com/jiemakel/gulp-typescript-angular",
-    "gulp-watch": "4.3.11",
-    "merge2": "1.0.3",
-    "run-sequence": "1.2.2",
-    "typescript": "2.2.1"
+    "ng-annotate-loader": "^0.6.1",
+    "ts-loader": "^2.1.0",
+    "typescript": "2.2.1",
+    "webpack": "^2.6.1",
+    "webpack-build-notifier": "^0.1.13"
+  },
+  "dependencies": {
+    "yasgui-yasr": "^2.11.4"
   }
 }
